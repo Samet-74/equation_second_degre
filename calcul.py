@@ -22,7 +22,7 @@ class Calcul:
         else:
             print("Le discriminant Δ est négatif.")
 
-    def determin(self):
+    def determin_x(self):
         print("Maintenant cherchons les solutions")
         if self.delta > 0:
             self.x_reelle_1 = (-self.b + sqrt(self.delta))/(2*self.a)
@@ -33,8 +33,14 @@ class Calcul:
             print(f"La solution est {self.x_double}")
         else:
             print("")
-
-a = Calcul()
-a.recup_nb()
-a.delta()
-a.determin()
+    
+    def alpha_beta(self):
+        print("Après avoir determiné les valeurs de x, il faut maintenant determiner alpha α et β pour pouvoir tracer le graphique.")
+        self.alpha = (-self.b)/(2*self.a)
+        self.beta = self.a*self.alpha**2 + self.b*self.alpha + self.c
+        print(f"Valeur d'alpha α: {self.alpha}  et valeur de beta β:    {self.beta}")
+# a = Calcul()
+# a.recup_nb()
+# a.delta()
+# # a.determin()
+# a.alpha_beta()
