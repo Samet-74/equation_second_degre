@@ -52,3 +52,5 @@ fm = plt.get_current_fig_manager()
 fm.window.showMaximized()
 plt.show()
 
+
+print("Test")
